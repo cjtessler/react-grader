@@ -2,8 +2,7 @@ label {
   display: block;
 }
 
-.page {
-  border: 1px solid #ff0000;
+.container-fluid {
   margin:  auto 300px;
 }
 
