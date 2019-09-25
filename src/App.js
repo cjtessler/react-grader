@@ -1,18 +1,17 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import GradeEntry from "./components/GradeEntry";
 import Results from "./components/Results";
 
 import "./App.css";
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      grades: Array(6).fill(null),
+      grades: Array(6).fill(80),
       isSubmitted: false
     };
 
@@ -42,7 +41,7 @@ class App extends React.Component {
       grades: Array(6).fill(null),
       isSubmitted: false
     });
-  }
+  };
 
   render() {
     return (
@@ -51,6 +50,7 @@ class App extends React.Component {
           <h3>Eplorations in Mathematics Grader</h3>
         </div>
 
+        {/* Grade Entry */}
         <div className="grade-entry">
           {!this.state.isSubmitted && (
             <GradeEntry
@@ -60,6 +60,7 @@ class App extends React.Component {
           )}
         </div>
 
+        {/* Results */}
         <div className="results">
           {this.state.isSubmitted && (
             <Results
@@ -77,6 +78,6 @@ class App extends React.Component {
 App.propTypes = {
   grades: PropTypes.arrayOf(PropTypes.number).isRequired,
   isSubmitted: PropTypes.bool
- }
+};
 
 export default App;

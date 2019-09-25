@@ -6,11 +6,3 @@ label {
   margin:  auto 300px;
 }
 
-table {
-  border-collapse: collapse;
-  border: 1px solid #ff0000;
-}
-
-table td {
-  border: 1px solid #ff0000;
-}

@@ -1,44 +1,28 @@
 import React from "react";
 
 function GradeEntry(props) {
-  const items = [];
+  const titles = ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Homework"];
+  const items = []
 
-  // Create Test boxes
-  for (let i = 1; i <= 5; i++) {
+  // Create  boxes
+  for (var i = 0; i< titles.length; i++) {
     items.push(
       <label key={i}>
-        Test {i}: <span> </span>
-        <input
-          type="number"
-          onChange={props.onChange}
-          name={i}
-          autoComplete="off"
-          className="form-control"
-          required
-          min="0"
-          max="100"
-        />
-      </label>
-    );
-  }
-
-  // Create Homework boxes
-  // TODO: generalize this to create with test boxes
-  items.push(
-    <label key={6}>
-      Homework: <span> </span>
+      {titles[i]}:
       <input
         type="number"
         onChange={props.onChange}
-        name="6"
+        name={i}
         autoComplete="off"
         className="form-control"
-        required
-        min="1"
+        // required
+        min="0"
         max="100"
+        defaultValue="80"
       />
     </label>
-  );
+    )
+  }
 
   // Return the form
   return (
