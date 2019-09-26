@@ -15,32 +15,32 @@ const averageGradeWithoutDrop = grades => {
 
 const makeTable = grades => {
   const gradeTable = {
-    "A" : 94,
+    A: 94,
     "A-": 90,
     "B+": 87,
-    "B" : 84,
+    B: 84,
     "B-": 80,
     "C+": 77,
-    "C" : 74,
+    C: 74,
     "C-": 70,
     "D+": 67,
-    "D" : 64,
-    "D-": 60,
+    D: 64,
+    "D-": 60
   };
 
   const tableRows = [];
   const sum = grades.reduce((a, b) => a + b);
 
   // Drop lowest test (not homework) grade
-  const min = Math.min(...grades.slice(0,grades.length));
+  const min = Math.min(...grades.slice(0, grades.length - 1));
 
-  // Boolean to stop generating 
+  // Boolean to stop table generation
   var zeroPosted = false;
 
   for (const [key, value] of Object.entries(gradeTable)) {
     // Calculate Score on the Final
     const requiredGrade = grades.length * value - (sum - min);
-    var gradeForTable = '';
+    var gradeForTable = "";
 
     if (requiredGrade < 0) {
       gradeForTable = 0;
@@ -55,24 +55,27 @@ const makeTable = grades => {
         <td>{key}</td>
         <td>{gradeForTable}</td>
       </tr>
-    )
-    
+    );
+
     // Finish table if looking at negative test scores
-    if (zeroPosted) { break };
+    if (zeroPosted) {
+      break;
+    }
   }
+
   return tableRows;
-  
 };
 
 function Results(props) {
-  const avg = averageGradeWithoutDrop(props.grades);
-  const min = Math.min(...props.grades);
-  const table = makeTable(props.grades);
+  const { grades } = props;
+  const avg = averageGradeWithoutDrop(grades);
+  const min = Math.min(...grades.slice(0, grades.length - 1));
+  const table = makeTable(grades);
 
   return (
     <div>
-      <p>Average (no dropped): {Math.round(avg * 100) / 100}</p>
-      <p>Dropped Grade: {min}</p>
+      <p>Average (no drop): {Math.round(avg * 100) / 100}</p>
+      <p>Dropped Test Grade: {min}</p>
 
       <p>
         In order to obtain the <em>Desired Course Grade</em>, you must earn the

@@ -20,11 +20,10 @@ class App extends React.Component {
   }
 
   handleChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const {name, value } = event.target;
     const grades = this.state.grades.slice();
 
-    grades[name - 1] = parseInt(value, 10);
+    grades[name] = parseInt(value, 10);
 
     this.setState({
       grades: grades
