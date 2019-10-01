@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      grades: Array(6).fill(80),
+      grades: Array(6).fill(null),
       isSubmitted: false
     };
 
@@ -30,8 +30,7 @@ class App extends React.Component {
     });
   };
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = () => {
     this.setState({ isSubmitted: true });
   };
 
@@ -44,15 +43,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fuild">
+      <div className="container-fuild is-Responsive">
         <div className="page-header">
-          <h3>Eplorations in Mathematics Grader</h3>
+          <h4>Eplorations in Mathematics Grader</h4>
         </div>
 
         {/* Grade Entry */}
         <div className="grade-entry">
           {!this.state.isSubmitted && (
             <GradeEntry
+              grades={this.state.grades}
               onSubmit={this.handleSubmit}
               onChange={this.handleChange}
             />

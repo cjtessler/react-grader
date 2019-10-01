@@ -2,7 +2,14 @@ label {
   display: block;
 }
 
-.container-fluid {
-  margin:  auto 300px;
+.container-fuild {
+  margin: auto;
+  position: block;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
+.container-fuild.is-Responsive {
+  min-width: 300px;
+  max-width: 400px;
+  padding: 10px;
+}

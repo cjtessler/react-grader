@@ -15,10 +15,10 @@ function GradeEntry(props) {
         name={i}
         autoComplete="off"
         className="form-control"
-        // required
+        required
         min="0"
         max="100"
-        defaultValue="80"
+        defaultValue={props.grades[i]}
       />
     </label>
     )
