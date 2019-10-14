@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   handleChange = event => {
-    const {name, value } = event.target;
+    const { name, value } = event.target;
     const grades = this.state.grades.slice();
 
     grades[name] = parseInt(value, 10);
@@ -30,13 +30,15 @@ class App extends React.Component {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault();
     this.setState({ isSubmitted: true });
   };
 
   handleReset = event => {
+    event.preventDefault()
     this.setState({
-      grades: Array(6).fill(null),
+      // grades: Array(6).fill(null),
       isSubmitted: false
     });
   };
@@ -45,30 +47,27 @@ class App extends React.Component {
     return (
       <div className="container-fuild is-Responsive">
         <div className="page-header">
-          <h4>Eplorations in Mathematics Grader</h4>
+          <h4>Explorations in Mathematics Grader</h4>
         </div>
 
-        {/* Grade Entry */}
-        <div className="grade-entry">
-          {!this.state.isSubmitted && (
-            <GradeEntry
-              grades={this.state.grades}
-              onSubmit={this.handleSubmit}
-              onChange={this.handleChange}
-            />
-          )}
-        </div>
-
-        {/* Results */}
-        <div className="results">
-          {this.state.isSubmitted && (
-            <Results
-              grades={this.state.grades}
-              requiredGrade={this.state.requiredGrade}
-              onSubmit={this.state.handleReset}
-            />
-          )}
-        </div>
+        {!this.state.isSubmitted ? (
+          <div className="grade-entry">
+              <GradeEntry
+                grades={this.state.grades}
+                onSubmit={this.handleSubmit}
+                onChange={this.handleChange}
+              />
+            
+          </div>
+        ) : (
+          <div className="results">
+              <Results
+                grades={this.state.grades}
+                requiredGrade={this.state.requiredGrade}
+                onSubmit={this.handleReset}
+              />
+          </div>
+        )}
       </div>
     );
   }

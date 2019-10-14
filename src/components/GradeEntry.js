@@ -8,7 +8,7 @@ function GradeEntry(props) {
   for (var i = 0; i< titles.length; i++) {
     items.push(
       <label key={i}>
-      {titles[i]}:
+      {titles[i]}
       <input
         type="number"
         onChange={props.onChange}
