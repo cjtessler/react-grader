@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "443a5c1a331a4c08ffb2703ab856c118",
+    "revision": "6e52361f4129b273445fc5a9bca97393",
     "url": "/react-grader/index.html"
   },
   {
-    "revision": "050e0034081d1cd6490d",
+    "revision": "404e6c6db4ef75be6121",
     "url": "/react-grader/static/css/main.62a38986.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-grader/static/js/2.66f997bd.chunk.js"
   },
   {
-    "revision": "050e0034081d1cd6490d",
-    "url": "/react-grader/static/js/main.7bb80bf3.chunk.js"
+    "revision": "404e6c6db4ef75be6121",
+    "url": "/react-grader/static/js/main.d24ab1d8.chunk.js"
   },
   {
     "revision": "dc7d00fd3572bbf8c723",
