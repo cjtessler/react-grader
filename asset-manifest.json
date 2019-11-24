@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-grader/static/css/main.62a38986.chunk.css",
-    "main.js": "/react-grader/static/js/main.61194a58.chunk.js",
-    "main.js.map": "/react-grader/static/js/main.61194a58.chunk.js.map",
+    "main.js": "/react-grader/static/js/main.fbfb5f0a.chunk.js",
+    "main.js.map": "/react-grader/static/js/main.fbfb5f0a.chunk.js.map",
     "runtime~main.js": "/react-grader/static/js/runtime~main.30b0587a.js",
     "runtime~main.js.map": "/react-grader/static/js/runtime~main.30b0587a.js.map",
     "static/js/2.66f997bd.chunk.js": "/react-grader/static/js/2.66f997bd.chunk.js",
     "static/js/2.66f997bd.chunk.js.map": "/react-grader/static/js/2.66f997bd.chunk.js.map",
     "index.html": "/react-grader/index.html",
-    "precache-manifest.00f3df310cdb0088fd23be3dd6939261.js": "/react-grader/precache-manifest.00f3df310cdb0088fd23be3dd6939261.js",
+    "precache-manifest.93419f5cc5ae3d12be721112cd35240b.js": "/react-grader/precache-manifest.93419f5cc5ae3d12be721112cd35240b.js",
     "service-worker.js": "/react-grader/service-worker.js",
     "static/css/main.62a38986.chunk.css.map": "/react-grader/static/css/main.62a38986.chunk.css.map"
   }
