@@ -79,7 +79,7 @@ function Results(props) {
 
       <p>
         In order to obtain the <em>Desired Course Grade</em>, you must earn at least the
-        specified <em>Score on the Final</em>.
+        specified <em>Score on the Final</em>.<sup>*</sup>
       </p>
 
       <table className="table">
@@ -95,6 +95,8 @@ function Results(props) {
       <form className="form-group" onSubmit={props.onSubmit}>
         <button className="btn btn-primary">Reset</button>
       </form>
+
+      <p><sup>*</sup><em>Grades specified here are not official. It is the responsbility of the student to verify grades using the syllabus.</em></p>
     </div>
   );
 }
