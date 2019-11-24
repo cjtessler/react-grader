@@ -78,7 +78,7 @@ function Results(props) {
       <p>Dropped Test Grade: {min}</p>
 
       <p>
-        In order to obtain the <em>Desired Course Grade</em>, you must earn the
+        In order to obtain the <em>Desired Course Grade</em>, you must earn at least the
         specified <em>Score on the Final</em>.
       </p>
 

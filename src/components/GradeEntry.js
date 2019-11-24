@@ -11,6 +11,7 @@ function GradeEntry(props) {
       {titles[i]}
       <input
         type="number"
+        step="0.01"
         onChange={props.onChange}
         name={i}
         autoComplete="off"
